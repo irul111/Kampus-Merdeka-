@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Calculator</title>
+ <style type="text/css">
+  .tombol{
+   background-color: rgb(204, 236, 18);
+  }
+  .tabel{
+   background-color: rgb(17, 151, 240);
+   margin: 10px;
+   padding: 10px;
+  }
+ </style>
+</head>
+<body>
+ <form name="calculator">
+  
+    <table align="left" background-color : " class= "tabel" >
+   <caption>Calculator</caption>
+   <tr>
+    <td>Angka 1</td><td>:</td><td><input type="number" name="angka1"></td>
+   </tr>
+   <tr>
+    <td>Angka 2</td><td>:</td><td><input type="number" name="angka2"></td>
+   </tr>
+   <tr>
+    <td>Hasil</td><td>:</td><td><input type="text" name="hasil"  disabled> </td>
+   </tr>
+   <tr>
+    <td colspan="3" align="center">
+     <input class="tombol" type="button" onclick="tambah()" value="  +  ">
+     <input class="tombol" type="button" onclick="kurang()" value="  -  ">
+     <input class="tombol" type="button" onclick="kali()" value="  *  ">
+     <input class="tombol" type="button" onclick="bagi()" value="  /  ">
+     <input type="reset" name="Batal" value="batal" />
+    </td>
+   </tr>
+  </table>
+ </form>
+
+</body>
+</html>
+<script type="text/javascript">
+     if (isNaN(angka1) || angka1 == '') {
+        alert("Data Salah/Kosong");
+    } else if (isNaN(angka2) || angka2 == '') {
+        alert("Data Salah/Kosong");
+    }
+function tambah(){
+ var angka1=parseFloat(document.calculator.angka1.value);
+ var angka2=parseFloat(document.calculator.angka2.value);
+ var hasil= angka1+angka2;
+ document.calculator.hasil.value=hasil;
+}
+function kurang(){
+ var angka1=parseFloat(document.calculator.angka1.value);
+ var angka2=parseFloat(document.calculator.angka2.value);
+ var hasil= angka1-angka2;
+ document.calculator.hasil.value=hasil;
+}
+function kali(){
+ var angka1=parseFloat(document.calculator.angka1.value);
+ var angka2=parseFloat(document.calculator.angka2.value);
+ var hasil= angka1*angka2;
+ document.calculator.hasil.value=hasil;
+}
+function bagi(){
+ var angka1=parseFloat(document.calculator.angka1.value);
+ var angka2=parseFloat(document.calculator.angka2.value);
+ var hasil= angka1/angka2;
+ document.calculator.hasil.value=hasil;
+}
+
+</script>
