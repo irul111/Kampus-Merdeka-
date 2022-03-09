@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Latihan Jquery - Event</title>
+        <script src="./jquery.js"></script>
+        <script>
+            $("document").ready(function () {
+                $("div.kuda").mouseover(function () {
+                    $(this).css("background-image", "url('./kuda.jpg')");
+                    $(this).css("background-size", "cover");
+                });
+                $("div.kuda").click(function () {
+                    const rollSound = new Audio("./kuda.mp3");
+                    rollSound.play()
+                });
+                $("div.kambing").mouseout(function () {
+                    $(this).css("background-image", "url('./kambing.jpg')");
+                    $(this).css("background-size", "cover");
+                    });
+                    $("div.kambing").click(function () {
+                    const rollSound = new Audio("./kambing.mp3");
+                    rollSound.play()
+                });
+                $("div.babi").mouseover(function () {
+                    $(this).css("background-image", "url('./babi.jpg')");
+                    $(this).css("background-size", "cover");
+                    });
+                    $("div.babi").click(function () {
+                    const rollSound = new Audio("./babi.mp3");
+                    rollSound.play()
+                });
+                $("div.bebek").mouseout(function () {
+                    $(this).css("background-image", "url('./bebek.jpg')");
+                    $(this).css("background-size", "cover");
+                    });
+                    $("div.bebek").click(function () {
+                    const rollSound = new Audio("./bebek.mp3");
+                    rollSound.play()
+                });
+            });
+        </script>
+        <style type="text/css">
+            div {
+                background: rgb(21, 173, 243);
+                width: 60px;
+                height: 60px;
+                float: left;
+                margin: 10px;
+                cursor: arrow;
+            }
+        </style>
+    </head>
+
+    <body>
+        <p>Dekati pada setiap kotak untuk menampilkan hewan</p>
+        <div class="kuda">Ini Hewan Kuda</div>
+        <div class="kambing">Ini Hewan Kambing</div>
+        <div class="babi">Ini Hewan Babi</div>
+        <div class="bebek">ini Hewan bebek </div>
+    </body>
+
+</html>
