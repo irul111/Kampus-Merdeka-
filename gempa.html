@@ -1,0 +1,59 @@
+<script>
+    class gempa {
+        constructor (lokasi, skala){
+            this.lokasi = lokasi;
+            this.skala = skala;
+        }
+        dampak(skl){
+            if (this.skala >= 0 && this.skala <= 2)
+            document.write(
+                `Terjadi gempa di ${this.lokasi} dengan skala ${this.skala} Dampaknya tidak terasa`
+            );
+            else if (this.skala >= 2 && this.skala <= 4)
+            document.write(
+                `Terjadi gempa di ${this.lokasi} dengan skala ${this.skala} Dampaknya bangunan retak retak`
+            );
+            else if (this.skala >= 4 && this.skala <= 6)
+            document.write(
+                `Terjadi gempa di ${this.lokasi} dengan skala ${this.skala} Dampaknya bangunan roboh`
+            );
+            else{
+            document.write(
+                `Terjadi gempa di ${this.lokasi} dengan skala ${this.skala} Dampaknya tidak terasa`
+            );
+            }
+
+        }
+    }
+    let singapura = new gempa("singapura", 5,6);
+    let india = new gempa("india ", 5,0);
+    let malaysia = new gempa("malaysia ", 5,1);
+    let arab = new gempa("arab", 2,6);
+    let usa = new gempa("usa", 4,6);
+    let myanmar = new gempa("myanmar", 3,6);
+    let kamboja = new gempa("kamboja", 5,5);
+    let filipin = new gempa("filipin", 4,2);
+    let thailan = new gempa("thailan", 2,6);
+    let rusia = new gempa("rusia", 4,6);
+
+    singapura.dampak();
+    document.write("<br/> <hr/>");
+    india.dampak();
+    document.write("<br/> <hr/>");
+    malaysia.dampak();
+    document.write("<br/> <hr/>");
+    arab.dampak();
+    document.write("<br/> <hr/>");
+    usa.dampak();
+    document.write("<br/> <hr/>");
+    myanmar.dampak();
+    document.write("<br/> <hr/>");
+    kamboja.dampak();
+    document.write("<br/> <hr/>");
+    filipin.dampak();
+    document.write("<br/> <hr/>");
+    thailan.dampak();
+    document.write("<br/> <hr/>");
+    rusia.dampak();
+    document.write("<br/> <hr/>");
+</script>
